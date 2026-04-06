@@ -32,7 +32,8 @@
 % Fonts
 \RequirePackage{kpfonts}
 \RequirePackage[fixed]{fontawesome5}
-\usepackage{CJKutf8}
+% CJKutf8 removed: incompatible with lualatex (breaks UTF-8 umlauts)
+% If CJK support is needed with lualatex, use luatexja instead
 
 % Color
 \RequirePackage{color}
