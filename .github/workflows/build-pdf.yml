@@ -30,6 +30,13 @@ jobs:
           name: cv-pdf
           path: Lebenslauf.pdf
 
+      - name: Force-update latest tag
+        run: |
+          git tag -d latest || true
+          git push origin :refs/tags/latest || true
+          git tag latest
+          git push origin latest
+
       - name: Create/Update Release
         uses: softprops/action-gh-release@v2
         with:
