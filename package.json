@@ -1,0 +1,14 @@
+{
+  "name": "cv-marc-borer",
+  "private": true,
+  "type": "module",
+  "version": "2.0.0",
+  "description": "Marc Borer's CV: HTML and CSS rendered to PDF with headless Chromium.",
+  "scripts": {
+    "build": "node build.mjs",
+    "preview": "node build.mjs --html"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}

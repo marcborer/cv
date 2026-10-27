@@ -1,0 +1,307 @@
+/* ==========================================================================
+   CV — the same specification-sheet system as marc-borer.ch, set for A4.
+   Tokens mirror src/styles/tokens.css on the site; print is light only.
+   ========================================================================== */
+
+:root {
+  --font-display: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Mono', Menlo, Consolas, monospace;
+
+  --paper: #FFFFFF;
+  --ink: #141821;
+  --ink-2: #2F3644;
+  --muted: #5C6474;
+  --hairline: #CBD1DB;
+  --hairline-strong: #A9B1BF;
+  --accent: #1E40D0;
+
+  --label-col: 33mm;
+  --gap: 5mm;
+}
+
+@page {
+  size: A4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 9.4pt;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.42;
+  color: var(--ink-2);
+  background: var(--paper);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+/* Screen preview only: show the sheet on grey */
+@media screen {
+  body {
+    background: #E4E8EF;
+    padding: 12mm 0;
+  }
+
+  .sheet {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 16mm 17mm 18mm;
+    background: var(--paper);
+    box-shadow: 0 2mm 8mm rgba(20, 24, 33, 0.15);
+  }
+}
+
+/* ---- Header ---- */
+.head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0 10mm;
+  align-items: end;
+  padding-bottom: 5mm;
+  border-bottom: 0.6mm solid var(--accent);
+  margin-bottom: 1mm;
+}
+
+.head-id {
+  display: grid;
+  gap: 2mm;
+  align-content: end;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-stretch: 112%;
+  font-weight: 600;
+  font-size: 29pt;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.role {
+  font-size: 11.5pt;
+  color: var(--ink);
+  margin-top: 1mm;
+}
+
+.role .tagline {
+  color: var(--muted);
+}
+
+.role .sep {
+  color: var(--hairline-strong);
+  padding: 0 1.5mm;
+}
+
+.contact {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1mm 0;
+  font-family: var(--font-mono);
+  font-size: 7.8pt;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  margin-top: 1.5mm;
+}
+
+.contact li + li::before {
+  content: '·';
+  color: var(--hairline-strong);
+  padding: 0 2mm;
+}
+
+.photo {
+  width: 30mm;
+  height: 42mm;
+  object-fit: cover;
+  border: 0.25mm solid var(--hairline);
+  display: block;
+}
+
+/* ---- Sections ---- */
+.sec {
+  display: grid;
+  grid-template-columns: var(--label-col) minmax(0, 1fr);
+  gap: 0 var(--gap);
+  padding: 3.6mm 0;
+  border-top: 0.25mm solid var(--hairline);
+}
+
+.sec:first-of-type {
+  border-top: none;
+  padding-top: 4mm;
+}
+
+.sec-label {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  font-family: var(--font-mono);
+  font-size: 7.4pt;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 0.9mm;
+  line-height: 1.4;
+}
+
+.sec-label::before {
+  content: '';
+  flex: none;
+  width: 4mm;
+  height: 0.3mm;
+  background: var(--accent);
+  transform: translateY(-0.9mm);
+}
+
+.sec-body {
+  min-width: 0;
+}
+
+.sec-body > * + * {
+  margin-top: 2.6mm;
+}
+
+.sec-body p {
+  max-width: 100%;
+}
+
+/* ---- Entries ---- */
+.entry > * + * {
+  margin-top: 1.2mm;
+}
+
+/* Keep an entry's head with its first lines; let long entries break between bullets. */
+.entry-head,
+.entry-org,
+.entry-summary {
+  break-after: avoid;
+}
+
+.bullets li {
+  break-inside: avoid;
+}
+
+.sec-label {
+  break-after: avoid;
+}
+
+.entry + .entry {
+  padding-top: 2.6mm;
+  border-top: 0.25mm solid var(--hairline);
+}
+
+.entry-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0 4mm;
+  align-items: baseline;
+}
+
+.entry-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 11pt;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.entry-period {
+  font-family: var(--font-mono);
+  font-size: 7.8pt;
+  color: var(--muted);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.entry-org {
+  font-size: 9.5pt;
+  color: var(--ink);
+}
+
+.entry-org .note {
+  color: var(--muted);
+}
+
+.entry-org .note::before {
+  content: '·';
+  color: var(--hairline-strong);
+  padding: 0 1.5mm;
+}
+
+.entry-summary {
+  color: var(--ink-2);
+  margin-top: 0.5mm;
+}
+
+.bullets {
+  list-style: none;
+  margin-top: 0.8mm;
+}
+
+.bullets li + li {
+  margin-top: 1mm;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 4.5mm;
+  color: var(--ink-2);
+}
+
+.bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 2.6mm;
+  height: 0.28mm;
+  background: var(--accent);
+}
+
+/* ---- Tables (skills, personal) ---- */
+.rows {
+  display: grid;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 34mm minmax(0, 1fr);
+  gap: 0 4mm;
+  padding: 1.4mm 0;
+  border-top: 0.25mm solid var(--hairline);
+  break-inside: avoid;
+}
+
+.row:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.row dt {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.row dd {
+  color: var(--ink-2);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--ink);
+}

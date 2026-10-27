@@ -1,23 +1,13 @@
-# LaTeX build artifacts
-*.aux
-*.log
-*.out
-*.toc
-*.fls
-*.fdb_latexmk
-*.synctex.gz
-*.synctex(busy)
-*.bbl
-*.blg
-*.bcf
-*.run.xml
+# build output (published by CI as release assets)
+dist/
 
-# Output PDF (built by CI)
-Lebenslauf.pdf
+# dependencies
+node_modules/
 
-# Editor files
+# editor files
 *.swp
 *.swo
 *~
 .vscode/
 .idea/
+.DS_Store

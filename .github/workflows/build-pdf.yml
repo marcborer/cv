@@ -5,7 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *'  # Every day at 06:00 UTC
+    - cron: '0 6 * * *'  # Every day at 06:00 UTC, so the release date stays current
 
 permissions:
   contents: write
@@ -18,17 +18,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install TeX Live
-        uses: xu-cheng/latex-action@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          root_file: Lebenslauf.tex
-          latexmk_use_lualatex: true
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Build PDFs
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: cv-pdf
-          path: Lebenslauf.pdf
+          path: |
+            dist/Lebenslauf.pdf
+            dist/CV-Marc-Borer-EN.pdf
 
       - name: Force-update latest tag
         run: |
@@ -42,8 +53,10 @@ jobs:
         with:
           tag_name: latest
           name: Latest CV
-          body: "Automatically built from the latest commit on main."
-          files: Lebenslauf.pdf
+          body: "Automatically built from the latest commit on main. Lebenslauf.pdf is German, CV-Marc-Borer-EN.pdf is English."
+          files: |
+            dist/Lebenslauf.pdf
+            dist/CV-Marc-Borer-EN.pdf
           make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

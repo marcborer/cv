@@ -1,0 +1,196 @@
+{
+  "lang": "en",
+  "file": "CV-Marc-Borer-EN.pdf",
+  "title": "Curriculum Vitae",
+  "stamp": "Last revised: October 2026",
+  "pageLabel": "Page",
+  "person": {
+    "name": "Marc Borer",
+    "role": "Senior ICT Systems Architect",
+    "tagline": "Founder of Attestree",
+    "contact": [
+      "Hirzengarten 2, 4226 Breitenbach, Switzerland",
+      "+41 79 960 96 91",
+      "mb@marc-borer.ch",
+      "marc-borer.ch",
+      "github.com/marcborer",
+      "linkedin.com/in/marc-b-6780ab5a"
+    ]
+  },
+  "sections": [
+    {
+      "type": "text",
+      "label": "Profile",
+      "paragraphs": [
+        "Senior ICT Systems Architect with over twelve years of experience in designing, building and securely operating business-critical Microsoft infrastructure: hybrid identity, Exchange Online and Microsoft Teams, Intune and endpoint lifecycle, SIEM. Since 2019 responsible for the target architecture of the cloud and hybrid infrastructure of an international industrial company, leading complex migration projects end to end without service interruption.",
+        "Since 2026 founder of Attestree, a platform that checks software for Windows fleets in a sandbox, gives it an SBOM and signs it before rollout (.NET, PostgreSQL, in-toto/SLSA). Way of working: ring-based rollouts, automation of the repeatable, evidence over assumption."
+      ]
+    },
+    {
+      "type": "entries",
+      "label": "Experience",
+      "entries": [
+        {
+          "title": "Founder and Architect",
+          "org": "Attestree, Breitenbach",
+          "note": "Own company, attestree.com",
+          "period": "2026 – present",
+          "summary": "Design, implementation and operation of a deployment control plane for Windows fleets that attests every package before rollout.",
+          "bullets": [
+            "Ingest gate: every winget package is installed in an isolated VM, its footprint recorded, captured as a CycloneDX SBOM and signed as an in-toto statement before it rolls out from a fenced winget feed in rings (canary, pilot, broad, all) with rollback.",
+            "Platform engineering end to end: a .NET control plane as a Linux container on PostgreSQL, a Native AOT installer shim and a self-updating endpoint agent, detonation on Hyper-V or Proxmox/KVM, a self-hosted CVE index (cvelistV5, CISA KEV).",
+            "Open-core distribution: Apache-2.0 shim, free Community Edition on Docker Compose with Sigstore-signed images, Authenticode-signed Windows binaries, a daily release cadence with CI gates.",
+            "Public website on Astro and Cloudflare Pages with a waitlist (Pages Function, D1, Turnstile) and a build-security baseline: SHA-pinned actions, Dependabot, an npm-audit gate."
+          ]
+        },
+        {
+          "title": "Senior ICT Systems Architect",
+          "org": "CTC Analytics AG, Zwingen",
+          "note": "Laboratory automation, around 180 employees, international",
+          "period": "March 2019 – present",
+          "summary": "Responsible for target architecture, evolution and secure operation of the Microsoft cloud and hybrid infrastructure: more than 100 Windows and Linux servers, Microsoft 365, Exchange Online, Teams, Active Directory, and infrastructure automation and standardisation.",
+          "bullets": [
+            "Cloud migration to Exchange Online and Microsoft Teams: project lead and overall technical ownership for moving from Exchange 2013 and Skype for Business (over 300 mailboxes, global telephony) to Microsoft 365, with hybrid coexistence with Exchange Server 2019, SBC and SIP trunk integration and Teams Calling over Direct Routing, without service interruption.",
+            "Enterprise device inventory and compliance platform: a serverless Azure architecture for over 500 Intune-managed devices. Azure Functions and proactive remediation capture BIOS versions, inventory and BitLocker status in Log Analytics; automation runbooks build Intune Win32 packages from OEM catalogs (Lenovo, Dell, HP); ring-based rollout (canary, pilot, broad) through dynamic groups and the Graph API; dashboards and alerting with Azure Monitor workbooks and Logic Apps.",
+            "Hybrid identity and user lifecycle automation: an HR-initiated self-service portal (Power Automate, Power Apps) and PowerShell orchestration for Active Directory, Exchange Online, Teams licensing, file-share permissions and Microsoft 365 groups.",
+            "SIEM on the Elastic Stack: a highly available Elasticsearch-Logstash-Kibana cluster, multi-source ingestion through Filebeat, Metricbeat, Winlogbeat and Heartbeat, Kibana dashboards for threat detection, anomaly analysis and compliance reporting."
+          ]
+        },
+        {
+          "title": "Sabbatical",
+          "org": "Personal time off",
+          "period": "January 2018 – February 2019",
+          "bullets": []
+        },
+        {
+          "title": "IT Operations Manager",
+          "org": "Vision Information Transaction AG / Picturepark, Aarau",
+          "note": "SaaS provider for digital asset management, international",
+          "period": "May 2014 – December 2017",
+          "summary": "Member of the IT operations team; development and operation of the Picturepark platform and customer-specific implementations.",
+          "bullets": [
+            "CI/CD pipeline for Azure deployments: automated alpha and beta deployments of the Picturepark software with Ansible and Bamboo, including automated installation of Active Directory, DNS, IIS, HAProxy and ELK clusters; over 30 reusable Ansible roles, snapshot-based testing on Hyper-V.",
+            "Customer implementations: technical lead for installing and configuring the platform on multi-server environments at enterprise customers."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "label": "Own projects",
+      "entries": [
+        {
+          "title": "SmallCapTrader",
+          "org": "Full-stack trading platform, private",
+          "period": "ongoing",
+          "bullets": [
+            "Python/FastAPI backend and Next.js frontend: several strategies, beam-search rule mining for strategy discovery, backtesting, multi-broker execution (Alpaca, Interactive Brokers), observability with Prometheus, Grafana and OpenTelemetry."
+          ]
+        },
+        {
+          "title": "options-gex",
+          "org": "Gamma-exposure research engine for options trading, private",
+          "period": "ongoing",
+          "bullets": [
+            "Historical option chains, local GEX computation and backtests against baselines behind a multi-condition statistical go-live gate; secrets encrypted with SOPS/age."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "entries",
+      "label": "Education and training",
+      "entries": [
+        {
+          "title": "Informatiker EFZ (Swiss Federal VET Diploma in IT), systems engineering",
+          "org": "Wirtschaftsinformatikschule, Zurich",
+          "period": "2010 – 2014",
+          "bullets": []
+        },
+        {
+          "title": "Designing and Implementing Microsoft DevOps Solutions",
+          "org": "Digicomp, Zurich, 4 days",
+          "period": "2025",
+          "bullets": []
+        },
+        {
+          "title": "PowerShell: Advanced Techniques",
+          "org": "Digicomp, Zurich, 2 days",
+          "period": "2019",
+          "bullets": []
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "label": "Skills",
+      "rows": [
+        [
+          "Cloud & identity",
+          "Microsoft Azure, Entra ID, hybrid identity (Active Directory, Entra Connect, ADFS/WAP), Conditional Access, MFA, Graph API"
+        ],
+        [
+          "Microsoft 365",
+          "Exchange Online and Exchange Server (hybrid), Microsoft Teams, Teams Phone with Direct Routing, SBC/SIP"
+        ],
+        [
+          "Endpoint & lifecycle",
+          "Microsoft Intune (MDM/MAM), Win32 packaging, BitLocker, BIOS and driver lifecycle, ring rollouts, winget, patch management"
+        ],
+        [
+          "Automation & development",
+          "PowerShell (expert), C#/.NET, Python, TypeScript, Bash, Ansible, GitHub Actions, Azure Automation, Azure Functions, Logic Apps, Power Automate"
+        ],
+        [
+          "Software supply chain",
+          "SBOM (CycloneDX, Syft), in-toto/SLSA, Sigstore/cosign, Authenticode, sandbox detonation, CVE matching"
+        ],
+        [
+          "Platforms & data",
+          "Docker, PostgreSQL, SQL Server, IIS, Windows Server 2008–2025, Red Hat Enterprise Linux, Hyper-V, VMware vSphere, Proxmox/KVM"
+        ],
+        [
+          "Monitoring & security",
+          "Elastic Stack (SIEM), Azure Monitor and Log Analytics, Prometheus, Grafana, OpenTelemetry, HAProxy, Cloudflare"
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "label": "Personal",
+      "rows": [
+        [
+          "Date of birth",
+          "22 January 1992"
+        ],
+        [
+          "Nationality",
+          "Swiss"
+        ],
+        [
+          "Marital status",
+          "Single"
+        ],
+        [
+          "Languages",
+          "German (native), English (C2)"
+        ],
+        [
+          "Interests",
+          "Gymnastics club, piano, hiking, skiing"
+        ],
+        [
+          "Availability",
+          "3 months’ notice"
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "label": "References",
+      "paragraphs": [
+        "Available on request."
+      ]
+    }
+  ]
+}
