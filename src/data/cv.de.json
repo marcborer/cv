@@ -77,28 +77,6 @@
     },
     {
       "type": "entries",
-      "label": "Eigene Projekte",
-      "entries": [
-        {
-          "title": "SmallCapTrader",
-          "org": "Full-Stack-Handelsplattform, privat",
-          "period": "laufend",
-          "bullets": [
-            "Python/FastAPI-Backend und Next.js-Frontend: mehrere Strategien, Beam-Search-Rule-Mining zur Strategieentdeckung, Backtesting, Multi-Broker-Ausführung (Alpaca, Interactive Brokers), Observability mit Prometheus, Grafana und OpenTelemetry."
-          ]
-        },
-        {
-          "title": "options-gex",
-          "org": "Research-Engine für Gamma Exposure im Optionshandel, privat",
-          "period": "laufend",
-          "bullets": [
-            "Historische Optionsketten, lokale GEX-Berechnung und Backtests gegen Baselines hinter einem mehrstufigen statistischen Go-Live-Gate; Secrets verschlüsselt mit SOPS/age."
-          ]
-        }
-      ]
-    },
-    {
-      "type": "entries",
       "label": "Ausbildung und Weiterbildung",
       "entries": [
         {

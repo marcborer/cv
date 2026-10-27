@@ -77,28 +77,6 @@
     },
     {
       "type": "entries",
-      "label": "Own projects",
-      "entries": [
-        {
-          "title": "SmallCapTrader",
-          "org": "Full-stack trading platform, private",
-          "period": "ongoing",
-          "bullets": [
-            "Python/FastAPI backend and Next.js frontend: several strategies, beam-search rule mining for strategy discovery, backtesting, multi-broker execution (Alpaca, Interactive Brokers), observability with Prometheus, Grafana and OpenTelemetry."
-          ]
-        },
-        {
-          "title": "options-gex",
-          "org": "Gamma-exposure research engine for options trading, private",
-          "period": "ongoing",
-          "bullets": [
-            "Historical option chains, local GEX computation and backtests against baselines behind a multi-condition statistical go-live gate; secrets encrypted with SOPS/age."
-          ]
-        }
-      ]
-    },
-    {
-      "type": "entries",
       "label": "Education and training",
       "entries": [
         {
