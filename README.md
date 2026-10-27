@@ -6,14 +6,14 @@ Marc Borer's CV as HTML and CSS, rendered to PDF with headless Chromium. It shar
 
 ## Download
 
-- **[Lebenslauf (Deutsch, PDF)](https://github.com/marcborer/cv/releases/latest/download/Lebenslauf.pdf)**
+- **[Lebenslauf (Deutsch, PDF)](https://github.com/marcborer/cv/releases/latest/download/Lebenslauf-Marc-Borer-DE.pdf)**
 - **[CV (English, PDF)](https://github.com/marcborer/cv/releases/latest/download/CV-Marc-Borer-EN.pdf)**
 
 ## How it works
 
 1. Edit the content in `src/data/cv.de.json` or `src/data/cv.en.json` and push to `main`
 2. GitHub Actions renders both languages with Playwright's Chromium (`build.mjs`)
-3. The PDFs are published as release assets at the stable URLs above
+3. The PDFs are published as release assets at the stable URLs above (`Lebenslauf.pdf` stays on the release as an alias of the German file for links already in circulation)
 
 Layout lives in `src/cv.css`, the HTML structure in `src/template.mjs`. Fonts are embedded from `src/fonts/` (the same WOFF2 files the website ships), the portrait from `profile.png`.
 
@@ -22,7 +22,7 @@ Layout lives in `src/cv.css`, the HTML structure in `src/template.mjs`. Fonts ar
 ```bash
 npm ci
 npx playwright install chromium   # once
-npm run build                     # dist/Lebenslauf.pdf, dist/CV-Marc-Borer-EN.pdf (+ .html)
+npm run build                     # dist/Lebenslauf-Marc-Borer-DE.pdf, dist/CV-Marc-Borer-EN.pdf (+ .html)
 npm run preview                   # HTML only, no browser needed
 ```
 

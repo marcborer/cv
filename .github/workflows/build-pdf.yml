@@ -33,12 +33,15 @@ jobs:
       - name: Build PDFs
         run: npm run build
 
+      - name: Keep the old German file name as an alias
+        run: cp dist/Lebenslauf-Marc-Borer-DE.pdf dist/Lebenslauf.pdf
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: cv-pdf
           path: |
-            dist/Lebenslauf.pdf
+            dist/Lebenslauf-Marc-Borer-DE.pdf
             dist/CV-Marc-Borer-EN.pdf
 
       - name: Force-update latest tag
@@ -53,10 +56,11 @@ jobs:
         with:
           tag_name: latest
           name: Latest CV
-          body: "Automatically built from the latest commit on main. Lebenslauf.pdf is German, CV-Marc-Borer-EN.pdf is English."
+          body: "Automatically built from the latest commit on main. Lebenslauf-Marc-Borer-DE.pdf is German, CV-Marc-Borer-EN.pdf is English; Lebenslauf.pdf is the German file under its former name, for links already in circulation."
           files: |
-            dist/Lebenslauf.pdf
+            dist/Lebenslauf-Marc-Borer-DE.pdf
             dist/CV-Marc-Borer-EN.pdf
+            dist/Lebenslauf.pdf
           make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
