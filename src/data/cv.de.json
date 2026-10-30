@@ -23,7 +23,7 @@
       "label": "Profil",
       "paragraphs": [
         "Senior ICT Systems Architect mit über zwölf Jahren Erfahrung in Architektur, Aufbau und sicherem Betrieb unternehmenskritischer Microsoft-Infrastruktur: Hybrid Identity, Exchange Online und Microsoft Teams, Intune und Endpoint-Lifecycle, SIEM. Seit 2019 verantwortlich für die Zielarchitektur der Cloud- und Hybrid-Infrastruktur eines internationalen Industrieunternehmens, mit eigenverantwortlicher Leitung komplexer Migrationsprojekte ohne Serviceunterbruch.",
-        "Seit 2026 Gründer von Attestree, einer Plattform, die Software für Windows-Flotten vor dem Rollout in einer Sandbox prüft, mit einer SBOM versieht und signiert (.NET, PostgreSQL, in-toto/SLSA). Arbeitsweise: ring-basierte Rollouts, Automatisierung des Wiederholbaren, Evidenz statt Annahme."
+        "Seit 2026 Gründer von Attestree, einer Plattform, die Software für Windows-Flotten vor dem Rollout in einer Sandbox prüft, mit einer SBOM versieht und signiert (.NET, PostgreSQL, in-toto, CycloneDX). Arbeitsweise: ring-basierte Rollouts, Automatisierung des Wiederholbaren, Evidenz statt Annahme."
       ]
     },
     {
@@ -37,7 +37,7 @@
           "period": "2026 – heute",
           "summary": "Konzeption, Umsetzung und Betrieb einer Deployment-Control-Plane für Windows-Flotten, die jedes Paket vor dem Rollout attestiert.",
           "bullets": [
-            "Ingest Gate: Jedes winget-Paket wird in einer isolierten VM installiert, sein Fussabdruck aufgezeichnet, als CycloneDX-SBOM festgehalten und als in-toto-Statement signiert, bevor es über einen eingezäunten winget-Feed in Rings (canary, pilot, broad, all) mit Rollback ausgerollt wird.",
+            "Ingest Gate: Jede winget-, Chocolatey- und Scoop-Version wird in einer isolierten VM installiert, ihr Fussabdruck aufgezeichnet, als CycloneDX-SBOM festgehalten und als in-toto-Statement signiert, bevor sie über einen eingezäunten Feed in Rings (canary, pilot, broad, all) mit Rollback ausgerollt wird.",
             "Plattform-Engineering end-to-end: .NET-Control-Plane als Linux-Container mit PostgreSQL, Native-AOT-Installer-Shim und selbstaktualisierender Endpoint-Agent, Detonation auf Hyper-V oder Proxmox/KVM, selbst gehosteter CVE-Index (cvelistV5, CISA KEV).",
             "Open-Core-Distribution: Apache-2.0-Shim, kostenlose Community Edition auf Docker Compose mit Sigstore-signierten Images, Authenticode-signierte Windows-Binaries, täglicher Release-Takt mit CI-Gates.",
             "Öffentliche Website auf Astro und Cloudflare Pages mit Warteliste (Pages Function, D1, Turnstile) und Build-Security-Baseline: SHA-gepinnte Actions, Dependabot, npm-audit-Gate."

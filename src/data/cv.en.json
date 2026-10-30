@@ -23,7 +23,7 @@
       "label": "Profile",
       "paragraphs": [
         "Senior ICT Systems Architect with over twelve years of experience in designing, building and securely operating business-critical Microsoft infrastructure: hybrid identity, Exchange Online and Microsoft Teams, Intune and endpoint lifecycle, SIEM. Since 2019 responsible for the target architecture of the cloud and hybrid infrastructure of an international industrial company, leading complex migration projects end to end without service interruption.",
-        "Since 2026 founder of Attestree, a platform that checks software for Windows fleets in a sandbox, gives it an SBOM and signs it before rollout (.NET, PostgreSQL, in-toto/SLSA). Way of working: ring-based rollouts, automation of the repeatable, evidence over assumption."
+        "Since 2026 founder of Attestree, a platform that checks software for Windows fleets in a sandbox, gives it an SBOM and signs it before rollout (.NET, PostgreSQL, in-toto, CycloneDX). Way of working: ring-based rollouts, automation of the repeatable, evidence over assumption."
       ]
     },
     {
@@ -37,7 +37,7 @@
           "period": "2026 – present",
           "summary": "Design, implementation and operation of a deployment control plane for Windows fleets that attests every package before rollout.",
           "bullets": [
-            "Ingest gate: every winget package is installed in an isolated VM, its footprint recorded, captured as a CycloneDX SBOM and signed as an in-toto statement before it rolls out from a fenced winget feed in rings (canary, pilot, broad, all) with rollback.",
+            "Ingest gate: every winget, Chocolatey and Scoop version is installed in an isolated VM, its footprint recorded, captured as a CycloneDX SBOM and signed as an in-toto statement before it rolls out from a fenced feed in rings (canary, pilot, broad, all) with rollback.",
             "Platform engineering end to end: a .NET control plane as a Linux container on PostgreSQL, a Native AOT installer shim and a self-updating endpoint agent, detonation on Hyper-V or Proxmox/KVM, a self-hosted CVE index (cvelistV5, CISA KEV).",
             "Open-core distribution: Apache-2.0 shim, free Community Edition on Docker Compose with Sigstore-signed images, Authenticode-signed Windows binaries, a daily release cadence with CI gates.",
             "Public website on Astro and Cloudflare Pages with a waitlist (Pages Function, D1, Turnstile) and a build-security baseline: SHA-pinned actions, Dependabot, an npm-audit gate."
