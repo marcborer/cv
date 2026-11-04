@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 // Renders one CV language as a self-contained HTML document.
 // Everything the PDF needs (fonts, photo, styles) is inlined so the output
 // survives on its own.
