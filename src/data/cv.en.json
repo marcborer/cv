@@ -80,12 +80,6 @@
       "label": "Education and training",
       "entries": [
         {
-          "title": "Informatiker EFZ (Swiss Federal VET Diploma in IT), systems engineering",
-          "org": "Wirtschaftsinformatikschule, Zurich",
-          "period": "2010 – 2014",
-          "bullets": []
-        },
-        {
           "title": "Designing and Implementing Microsoft DevOps Solutions",
           "org": "Digicomp, Zurich, 4 days",
           "period": "2025",
@@ -95,6 +89,12 @@
           "title": "PowerShell: Advanced Techniques",
           "org": "Digicomp, Zurich, 2 days",
           "period": "2019",
+          "bullets": []
+        },
+        {
+          "title": "Informatiker EFZ (Swiss Federal VET Diploma in IT), systems engineering",
+          "org": "Wirtschaftsinformatikschule, Zurich",
+          "period": "2010 – 2014",
           "bullets": []
         }
       ]
