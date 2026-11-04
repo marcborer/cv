@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 // Builds the CV PDFs (and HTML previews) from src/data/*.json.
 //
 //   npm run build          → dist/Lebenslauf.pdf, dist/CV-Marc-Borer-EN.pdf (+ .html)

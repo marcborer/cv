@@ -80,12 +80,6 @@
       "label": "Ausbildung und Weiterbildung",
       "entries": [
         {
-          "title": "Informatiker EFZ, Fachrichtung Systemtechnik",
-          "org": "Wirtschaftsinformatikschule, Zürich",
-          "period": "2010 – 2014",
-          "bullets": []
-        },
-        {
           "title": "Designing and Implementing Microsoft DevOps Solutions",
           "org": "Digicomp, Zürich, 4 Tage",
           "period": "2025",
@@ -95,6 +89,12 @@
           "title": "PowerShell: Fortgeschrittene Techniken",
           "org": "Digicomp, Zürich, 2 Tage",
           "period": "2019",
+          "bullets": []
+        },
+        {
+          "title": "Informatiker EFZ, Fachrichtung Systemtechnik",
+          "org": "Wirtschaftsinformatikschule, Zürich",
+          "period": "2010 – 2014",
           "bullets": []
         }
       ]

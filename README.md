@@ -36,4 +36,8 @@ To reuse an existing Playwright install, point `PLAYWRIGHT_MODULE` at its `index
 
 ## License
 
-Content is personal. The build scripts may be reused freely.
+Mixed, see [LICENSE](LICENSE):
+
+- **Build code** (`build.mjs`, `src/template.mjs`, `package.json`, `.github/`): MIT, free to reuse with the copyright notice
+- **Content** (`src/data/`, `profile.png`, `src/cv.css`, the generated PDFs): all rights reserved, not licensed for reuse
+- **Fonts** (`src/fonts/`): Archivo and IBM Plex under the SIL Open Font License 1.1, notices in [`OFL-Archivo.txt`](src/fonts/OFL-Archivo.txt) and [`OFL-IBM-Plex.txt`](src/fonts/OFL-IBM-Plex.txt)
