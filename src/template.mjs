@@ -4,6 +4,10 @@
 // survives on its own.
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// Hyphenated words in the tagline stay whole ("Open-Core-Projekt:"). A line break after an
+// inner hyphen reads fine on paper, but text extraction (what applicant-tracking systems
+// read) drops that hyphen and yields "Open-CoreProjekt". The line still breaks at spaces.
+const keepHyphenatedWords = (html) => html.replace(/\S+-\S+/g, (w) => `<span class="nobr">${w}</span>`);
 
 function entry(e) {
   return `
@@ -47,7 +51,7 @@ export function render(data, { css, fontCss, photoDataUrl }) {
   <header class="head">
     <div class="head-id">
       <h1>${esc(p.name)}</h1>
-      <p class="role">${esc(p.role)}<span class="sep">·</span><span class="tagline">${esc(p.tagline)}</span></p>
+      <p class="role">${esc(p.role)}<span class="sep">·</span><span class="tagline">${keepHyphenatedWords(esc(p.tagline))}</span></p>
       <ul class="contact">${p.contact.map((c) => `<li>${esc(c)}</li>`).join('')}</ul>
     </div>
     ${photoDataUrl ? `<img class="photo" src="${photoDataUrl}" alt="">` : ''}
