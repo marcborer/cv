@@ -7,7 +7,7 @@
   "person": {
     "name": "Marc Borer",
     "role": "Senior ICT Systems Architect",
-    "tagline": "Founder of Attestree",
+    "tagline": "Independent research & open-core project: Attestree",
     "contact": [
       "Hirzengarten 2, 4226 Breitenbach, Switzerland",
       "+41 79 960 96 91",
@@ -23,7 +23,7 @@
       "label": "Profile",
       "paragraphs": [
         "Senior ICT Systems Architect with over twelve years of experience in designing, building and securely operating business-critical Microsoft infrastructure: hybrid identity, Exchange Online and Microsoft Teams, Intune and endpoint lifecycle, SIEM. Since 2019 responsible for the target architecture of the cloud and hybrid infrastructure of an international industrial company, leading complex migration projects end to end without service interruption.",
-        "Since 2026 founder of Attestree, a platform that checks software for Windows fleets in a sandbox, gives it an SBOM and signs it before rollout (.NET, PostgreSQL, in-toto, CycloneDX). Way of working: ring-based rollouts, automation of the repeatable, evidence over assumption."
+        "Since 2026 Attestree, an independent research & open-core project: a platform that checks software for Windows fleets in a sandbox, gives it an SBOM and signs it before rollout (.NET, PostgreSQL, in-toto, CycloneDX). Way of working: ring-based rollouts, automation of the repeatable, evidence over assumption."
       ]
     },
     {
@@ -31,9 +31,9 @@
       "label": "Experience",
       "entries": [
         {
-          "title": "Founder and Architect",
+          "title": "Independent research & open-core project",
           "org": "Attestree, Breitenbach",
-          "note": "Own company, attestree.com",
+          "note": "attestree.com",
           "period": "2026 – present",
           "summary": "Design, implementation and operation of a deployment control plane for Windows fleets that attests every package before rollout.",
           "bullets": [
