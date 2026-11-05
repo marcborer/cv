@@ -7,7 +7,7 @@
   "person": {
     "name": "Marc Borer",
     "role": "Senior ICT Systems Architect",
-    "tagline": "Gründer von Attestree",
+    "tagline": "Unabhängiges Forschungs- & Open-Core-Projekt: Attestree",
     "contact": [
       "Hirzengarten 2, 4226 Breitenbach",
       "+41 79 960 96 91",
@@ -23,7 +23,7 @@
       "label": "Profil",
       "paragraphs": [
         "Senior ICT Systems Architect mit über zwölf Jahren Erfahrung in Architektur, Aufbau und sicherem Betrieb unternehmenskritischer Microsoft-Infrastruktur: Hybrid Identity, Exchange Online und Microsoft Teams, Intune und Endpoint-Lifecycle, SIEM. Seit 2019 verantwortlich für die Zielarchitektur der Cloud- und Hybrid-Infrastruktur eines internationalen Industrieunternehmens, mit eigenverantwortlicher Leitung komplexer Migrationsprojekte ohne Serviceunterbruch.",
-        "Seit 2026 Gründer von Attestree, einer Plattform, die Software für Windows-Flotten vor dem Rollout in einer Sandbox prüft, mit einer SBOM versieht und signiert (.NET, PostgreSQL, in-toto, CycloneDX). Arbeitsweise: ring-basierte Rollouts, Automatisierung des Wiederholbaren, Evidenz statt Annahme."
+        "Seit 2026 Attestree, ein unabhängiges Forschungs- & Open-Core-Projekt: eine Plattform, die Software für Windows-Flotten vor dem Rollout in einer Sandbox prüft, mit einer SBOM versieht und signiert (.NET, PostgreSQL, in-toto, CycloneDX). Arbeitsweise: ring-basierte Rollouts, Automatisierung des Wiederholbaren, Evidenz statt Annahme."
       ]
     },
     {
@@ -31,9 +31,9 @@
       "label": "Berufserfahrung",
       "entries": [
         {
-          "title": "Gründer und Architekt",
+          "title": "Unabhängiges Forschungs- & Open-Core-Projekt",
           "org": "Attestree, Breitenbach",
-          "note": "Eigenes Unternehmen, attestree.com",
+          "note": "attestree.com",
           "period": "2026 – heute",
           "summary": "Konzeption, Umsetzung und Betrieb einer Deployment-Control-Plane für Windows-Flotten, die jedes Paket vor dem Rollout attestiert.",
           "bullets": [
