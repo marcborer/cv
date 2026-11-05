@@ -99,6 +99,10 @@ h1 {
   color: var(--muted);
 }
 
+.role .tagline .nobr {
+  white-space: nowrap;
+}
+
 .role .sep {
   color: var(--hairline-strong);
   padding: 0 1.5mm;
